@@ -22,7 +22,7 @@ $this->load->helper('function');
 					<input class="form-control" type="text" placeholder="Enter Title" id="title" value='<?php echo $post[0]->title?>'><br>
 					<textarea id="editor1" name="editor1" rows="10" cols="80" style="visibility: hidden; display: none;"><?php echo $post[0]->content?>  </textarea> <br>
 					<div class="input-group">
-					<input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2" name='image' id="image_link" value='<?php echo $post[0]->image?>'>
+					<input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2" name='image' id="image_link" value='<?php echo $post[0]->image?>' readonly>
 					<span  style="background: #009fff;color: white;" class=" btn btn-primary input-group-addon" role='button' id="basic-addon2" data-toggle="modal" data-target="#myModal"><i class='fa fa-search'></i> Upload</span>
 					</div>
 					<br>

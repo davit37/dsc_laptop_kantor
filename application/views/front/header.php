@@ -11,6 +11,7 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo site_url('assets/front/')?>bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo site_url('assets/front/')?>style/style.css">
   <link rel="stylesheet" href="<?php echo site_url('assets/front/')?>style/desktop.css">

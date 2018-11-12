@@ -41,6 +41,7 @@ function readURL(input) {
 
         $('#prev').attr('src', e.target.result);
         $('#prev').show()
+        $('#img-submit').show();
         $('#lbl').html(input.files[0].name)
       }
 
@@ -55,6 +56,8 @@ function readURL(input) {
 $(document).ready(function(){
 
     $('#prev').hide();
+    $('#img-submit').hide();
+
     $.ajax({
         method:"GET",
         dataType:"Json",

@@ -48,7 +48,8 @@ body {
 .card-body {
   text-align: justify;
   text-justify: inter-word;
-  font-size: 12px; }
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif; }
 
 .content {
   height: 100%;
