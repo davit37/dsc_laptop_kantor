@@ -38,7 +38,9 @@ function readURL(input) {
       var reader = new FileReader();
 
       reader.onload = function (e) {
+
         $('#prev').attr('src', e.target.result);
+        $('#prev').show()
         $('#lbl').html(input.files[0].name)
       }
 
@@ -52,6 +54,7 @@ function readURL(input) {
 
 $(document).ready(function(){
 
+    $('#prev').hide();
     $.ajax({
         method:"GET",
         dataType:"Json",

@@ -1,14 +1,14 @@
-  <!-- Jumbotron -->
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid">
+	<div class="container">
 
-    </div>
-  </div>
-  <!-- End Jumbotron -->
-  <!-- List Content -->
-  <div class="container-fluid content">
-    <div class="row justify-content-center">
-    <?php 
+	</div>
+</div>
+<!-- End Jumbotron -->
+<!-- List Content -->
+<div class="container-fluid content">
+	<div class="row justify-content-center">
+		<?php 
       $i=0;
         foreach ($data as $obj){
           $title=word_limiter($obj->title, 5, "...");
@@ -28,33 +28,31 @@
         }
         ?>
 
-      
+<br><br>
 
+		<div class="col-8  col-md-8 col-lg-9">
+			<div class="form-group">
+				<div class="custom-file">
+					<input type="file" class="custom-file-input" id="imgUp" lang="es">
+					<label class="custom-file-label" for="customFileLang" id='lbl'>Seleccionar Archivo</label>
 
-    </div>
+				</div>
+				<br><br>
 
-  </div>
-  <!-- End List Content-->
-
-   <div class="conatiner-fluid">
-    <div class="row justify-content-center">
-      <div class="col-8">
-        <div class="form-group">
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" id="imgUp" lang="es">
-            <label class="custom-file-label" for="customFileLang" id='lbl'>Seleccionar Archivo</label>
-
-          </div>
-          <br><br>
-
-          <div class="col-4" >
-              <img src="..." alt="images" class="img-thumbnail" id='prev'>
-          </div>
-
-
+				<div class="col-4">
+					<img src="..." alt="images" class="img-thumbnail" id='prev'>
         </div>
-      </div>
+        <br><br>
+        <div class="col-4">
+        <button type="submit" class="btn btn-primary ">submit</button>
+        </div>
+        
 
-    </div>
 
-  </div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+<!-- End List Content-->
