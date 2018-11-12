@@ -30,6 +30,26 @@ function stopInterval(){
     IDsetInterval=0;
 }
 
+
+//upload foto front end
+function readURL(input) {
+
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('#prev').attr('src', e.target.result);
+        $('#lbl').html(input.files[0].name)
+      }
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  $("#imgUp").change(function () {
+    readURL(this);
+  });
+
 $(document).ready(function(){
 
     $.ajax({

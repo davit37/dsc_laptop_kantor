@@ -1,6 +1,6 @@
 
   <!-- Footer -->
-  <div class="footer">
+  <div class="footer ">
     <p>Copyright Designcub3 © 2018</p>
   </div>
   <!-- End Footer -->

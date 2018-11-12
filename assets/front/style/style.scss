@@ -45,6 +45,7 @@ body{
     text-align: center;
     padding-top: 20px;
     
+    margin-top: 220px;
 
 }
 
@@ -55,5 +56,15 @@ body{
 .logo{
     width: 50px;
     height: 44px;
+}
+.card-body{
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 12px;
+}
+
+.content{
+    height: 100%;
+    margin-bottom: 15px;
 }
 

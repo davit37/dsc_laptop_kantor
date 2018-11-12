@@ -6,7 +6,7 @@
   </div>
   <!-- End Jumbotron -->
   <!-- List Content -->
-  <div class="container-fluid">
+  <div class="container-fluid content">
     <div class="row justify-content-center">
     <?php 
       $i=0;
@@ -35,3 +35,26 @@
 
   </div>
   <!-- End List Content-->
+
+   <div class="conatiner-fluid">
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <div class="form-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="imgUp" lang="es">
+            <label class="custom-file-label" for="customFileLang" id='lbl'>Seleccionar Archivo</label>
+
+          </div>
+          <br><br>
+
+          <div class="col-4" >
+              <img src="..." alt="images" class="img-thumbnail" id='prev'>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
