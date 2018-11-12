@@ -1,0 +1,31 @@
+@media (min-width: 992px) {
+  .jumbotron {
+    height: 400px; }
+
+  .nav-link:hover::after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid rgba(125, 202, 233, 0.692);
+    width: 50%;
+    margin: auto;
+    padding-bottom: 3px;
+    margin-bottom: -8px;
+    border-radius: 200px;
+    text-shadow: 0 1px gray; }
+
+  .nav-link {
+    text-transform: uppercase; }
+
+  .img-thumbnail {
+    width: 245px;
+    height: 163px; }
+
+  .thumb-col {
+    margin-right: 100px; }
+
+  .custom-text {
+    width: 245px;
+    margin-left: -15px;
+    font-size: 14px; } }
+
+/*# sourceMappingURL=desktop.css.map */
