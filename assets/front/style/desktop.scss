@@ -37,8 +37,17 @@
     .custom-text{
         width: 245px;
         margin-left: -15px;
+      
+    }
+
+    .card-body {
+        padding: 0;
+        width:245px;
+        text-align: justify;
+        text-justify: inter-word;
         font-size: 13px;
     }
+
     
     
  }

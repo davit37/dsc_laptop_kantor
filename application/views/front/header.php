@@ -1,3 +1,6 @@
+<?php
+ $this->load->helper("text");
+?> 
 <!doctype html>
 <html lang="en">
 
