@@ -78,6 +78,24 @@ $(document).ready(function(){
         startInterval();
     })
     startInterval();
+
+
+    //event save upload
+    $(document).on('click','#img-submit',function(){
+        $.ajax({
+            method:'POST',
+            dataType:'JSON',
+            url:site_url+"front/do_upload",
+            data:{
+                image:$('#imgUp').val()
+            }
+        }).done(function(msg){
+            console.log(msg)
+            if(msg==true){
+                console.log("True")
+            }
+        })
+    })
 })
 
 

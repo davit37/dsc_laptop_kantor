@@ -33,7 +33,7 @@
 		<div class="col-8  col-md-8 col-lg-9">
 			<div class="form-group">
 				<div class="custom-file">
-					<input type="file" class="custom-file-input" id="imgUp" lang="es">
+					<input type="file" class="custom-file-input" id="imgUp" lang="es" name='uploadimg'>
 					<label class="custom-file-label" for="customFileLang" id='lbl'>Seleccionar Archivo</label>
 
 				</div>
@@ -44,7 +44,7 @@
         </div>
         <br><br>
         <div class="col-4">
-        <button type="submit" class="btn btn-primary " id='img-submit'>submit</button>
+        <button type="button" class="btn btn-primary " id='img-submit'>submit</button>
         </div>
         
 

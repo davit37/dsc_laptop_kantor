@@ -31,7 +31,33 @@ class Front extends CI_Controller
         
         echo json_encode($data);
 
-    }
+	}
+	
+	public function do_upload()
+        {
+                $config['upload_path']          = './asset/file';
+                $config['allowed_types']        = 'gif|jpg|png';
+                $config['max_size']             = 200;
+                $config['max_width']            = 1024;
+				$config['max_height']           = 768;
+				$config['encrypt_name']			= true;
+
+
+                $this->load->library('upload', $config);
+
+                if ( ! $this->upload->do_upload())
+                {
+                        $error = array('error' => $this->upload->display_errors());
+
+                        var_dump($error);
+                }
+                else
+                {
+                        $data = array('upload_data' => $this->upload->data());
+
+                        echo json_encode('true');
+                }
+        }
 
 
 }
