@@ -1,7 +1,8 @@
 
   <!-- Footer -->
-  <div class='fixed-bottom ml-auto'>
-    <img src="<?php echo base_url('assets/file/icon/icon-back-to-top.png')?>" alt="te" srcset="">
+  <div class='fixed-bottom ml-auto btn-scroll'>
+     <a href='body'> <i class="fas fa-arrow-circle-up"></i> To Top</a>
+     <a href='#articel'> <i class="fas fa-arrow-circle-right"></i> To Articel</a>
   </div>
   <div class="footer ">
     <p>Copyright Designcub3 © 2018</p>

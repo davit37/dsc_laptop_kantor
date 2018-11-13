@@ -68,4 +68,24 @@ body{
     height: 100%;
     margin-bottom: 15px;
 }
+.btn-scroll{
+    padding-bottom: 50px;
+    a{
+        float: right;
+        margin-left: 20px;
+        font-size: 12px;
+        font-weight: 600px;
+        
+        i{
+            font-size: 40px;
+            color: rgba(93, 243, 93, 0.89);
+        }
+    }
+
+    a:hover{
+        text-decoration: none;
+    }
+    
+    
+}
 

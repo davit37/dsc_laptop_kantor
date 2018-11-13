@@ -55,4 +55,17 @@ body {
   height: 100%;
   margin-bottom: 15px; }
 
+.btn-scroll {
+  padding-bottom: 50px; }
+  .btn-scroll a {
+    float: right;
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: 600px; }
+    .btn-scroll a i {
+      font-size: 40px;
+      color: rgba(93, 243, 93, 0.89); }
+  .btn-scroll a:hover {
+    text-decoration: none; }
+
 /*# sourceMappingURL=style.css.map */

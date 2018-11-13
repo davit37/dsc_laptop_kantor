@@ -1,13 +1,13 @@
 <!-- Jumbotron -->
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid" id='slider'>
 	<div class="container">
 
 	</div>
 </div>
 <!-- End Jumbotron -->
 <!-- List Content -->
-<div class="container-fluid content">
-	<div class="row justify-content-center">
+<div class="container-fluid content"id='articel'>
+	<div class="row justify-content-center" >
 		<?php 
       $i=0;
         foreach ($data as $obj){
