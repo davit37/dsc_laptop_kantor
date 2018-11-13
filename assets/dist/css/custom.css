@@ -1,2 +1,58 @@
-.pagination{border-radius:200px;box-shadow:1px 1px 10px rgba(0,0,0,0.1)}.pagination li:first-child span{border-top-left-radius:200px;border-bottom-left-radius:200px}.pagination li:last-child span{border-top-right-radius:200px;border-bottom-right-radius:200px}.dataTables_wrapper .dataTables_paginate .paginate_button{box-sizing:border-box;display:inline-block;min-width:1.5em;padding:0px;margin-left:2px;text-align:center;text-decoration:none !important;cursor:pointer;*cursor:hand;color:#333 !important;border:1px solid transparent;border-radius:2px}.dataTables_wrapper .dataTables_paginate .paginate_button:hover{border:1px solid rgba(0,0,0,0.2);background-color:none}.form-upload{width:85%;float:left;margin-right:20px}.disabledContent{pointer-events:none;opacity:0.4}.modal-content{background-color:transparent}.bg-custom-red{background-color:#ff1c004f !important;color:#90030f !important}.bg-custom-success{background-color:#08f1374d !important;color:#00b359 !important;font-weight:bold}
+.pagination {
+  border-radius: 200px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); }
+  .pagination li:first-child span {
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px; }
+  .pagination li:last-child span {
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px; }
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0px;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  *cursor: hand;
+  color: #333 !important;
+  border: 1px solid transparent;
+  border-radius: 2px; }
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: none; }
+
+.form-upload {
+  width: 85%;
+  float: left;
+  margin-right: 20px; }
+
+.disabledContent {
+  pointer-events: none;
+  opacity: 0.4; }
+
+.modal-content {
+  background-color: transparent; }
+
+.bg-custom-red {
+  background-color: #ff1c004f !important;
+  color: #90030f !important;
+  font-size: 11px; }
+
+.bg-custom-success {
+  background-color: #08f1374d !important;
+  color: #00b359 !important;
+  font-weight: bold;
+  font-size: 12px; }
+
+@media (min-width: 992px) {
+  .bg-custom-red {
+    font-size: 14px; }
+
+  .bg-custom-success {
+    font-size: 14px; } }
+
 /*# sourceMappingURL=custom.css.map */

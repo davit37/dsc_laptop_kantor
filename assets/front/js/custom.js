@@ -37,7 +37,7 @@ function stopInterval() {
 
 //upload foto front end
 function readURL(input) {
-    $('#notif').html('')
+	$('#notif').html('')
 	if (input.files && input.files[0]) {
 		var reader = new FileReader();
 
@@ -49,33 +49,45 @@ function readURL(input) {
 			$('#lbl').html(input.files[0].name)
 		}
 
-        
-        file = input.files[0];
 
-        if (!file.type.match(imageType))
-        {
-            $('#notif').append("<div class='alert bg-custom-red alert-dismissible'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button> File Type Not Allowed </div>");
-            return;
-        } 
-    	
-        formdata  = new FormData();
-        formdata.append('file', file);
-    
-        
+		file = input.files[0];
 
-        reader.readAsDataURL(input.files[0]);
-        
+		if (!file.type.match(imageType)) {
+			$('#notif').append("<div class='alert bg-custom-red alert-dismissible'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button> File Type Not Allowed </div>");
+			return;
+		}
+
+		formdata = new FormData();
+		formdata.append('file', file);
+
+
+
+		reader.readAsDataURL(input.files[0]);
+
 	}
 }
 
-
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+console.log(currentScrollPos)
+  if (currentScrollPos <100) {
+	$('.btn-scroll').fadeOut();
+    	
+  } else {
+	$('.btn-scroll').fadeIn();
+  }
+  prevScrollpos = currentScrollPos;
+}
 
 // jquery 
 $(document).ready(function () {
 
+
+
 	$('#prev').hide();
-    $('#img-submit').hide();
-   
+	$('#img-submit').hide();
+
 
 	$.ajax({
 		method: "GET",
@@ -109,61 +121,63 @@ $(document).ready(function () {
 
 	$(document).on('click', '#img-submit', function () {
 		console.log(formdata)
-        console.log(file)
-        console.log($('#notif'))
-        $('#notif').html('')
-        
-        for (var key of formdata.entries()) {
-            console.log(key[0] + ', ' + key[1]);
-        }
-        console.log(formdata)
-        if (!file.type.match(imageType)){
-            $('#notif').append("<div class='alert bg-custom-red alert-dismissible'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button> File Type Not Allowed   </div>")
-         }else{
-            $.ajax({
-                method: 'POST',
-                dataType: 'JSON',
-                url: site_url + "front/do_upload",
-                data: formdata,
-                processData: false,
-                contentType: false,
-                cache: false,
-                
-            }).done(function (msg) {
-                console.log(msg)
-                if (msg == "true") {
-                    console.log("True")
-                    $('#notif').append("<div class='alert bg-custom-success alert-dismissible'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button> Upload Success     </div>")
-                }
-                else{
-                    $('#notif').append("<div class='alert bg-custom-red alert-dismissible'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>"+ msg   +"</div>")
-                }
-            })
-       }
-        
+		console.log(file)
+		console.log($('#notif'))
+		$('#notif').html('')
+
+		for (var key of formdata.entries()) {
+			console.log(key[0] + ', ' + key[1]);
+		}
+		console.log(formdata)
+		if (!file.type.match(imageType)) {
+			$('#notif').append("<div class='alert bg-custom-red alert-dismissible'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button> File Type Not Allowed   </div>")
+		} else {
+			$.ajax({
+				method: 'POST',
+				dataType: 'JSON',
+				url: site_url + "front/do_upload",
+				data: formdata,
+				processData: false,
+				contentType: false,
+				cache: false,
+
+			}).done(function (msg) {
+				console.log(msg)
+				if (msg == "true") {
+					console.log("True")
+					$('#notif').append("<div class='alert bg-custom-success alert-dismissible'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button> Upload Success     </div>")
+				} else {
+					$('#notif').append("<div class='alert bg-custom-red alert-dismissible'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>" + msg + "</div>")
+				}
+			})
+		}
+
 	})
-	
-	$(".scroll-link").on('click', function(event) {
+
+	$(".scroll-link").on('click', function (event) {
 
 		// Make sure this.hash has a value before overriding default behavior
 		if (this.hash !== "") {
-		  // Prevent default anchor click behavior
-		  event.preventDefault();
-	
-		  // Store hash
-		  var hash = this.hash;
-	
-		  // Using jQuery's animate() method to add smooth page scroll
-		  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-		  $('html, body').animate({
-			scrollTop: $(hash).offset().top
-		  }, 800, function(){
-	   
-			// Add hash (#) to URL when done scrolling (default click behavior)
-			window.location.hash = hash;
-		  });
+			// Prevent default anchor click behavior
+			event.preventDefault();
+
+			// Store hash
+			var hash = this.hash;
+
+			// Using jQuery's animate() method to add smooth page scroll
+			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top
+			}, 800, function () {
+
+				// Add hash (#) to URL when done scrolling (default click behavior)
+				window.location.hash = hash;
+			});
 		} // End if
-	  });
-    
-    
+	});
+
+	
+
+
 })
+

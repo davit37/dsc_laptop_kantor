@@ -56,9 +56,22 @@
 .bg-custom-red{
     background-color: #ff1c004f !important;
     color: #90030f !important;
+    font-size: 11px;
 }
 .bg-custom-success{
     background-color: #08f1374d !important;
     color: #00b359 !important;
     font-weight: bold;
+    font-size: 12px;
+}
+
+@media (min-width: 992px) {
+    .bg-custom-red{
+        
+        font-size: 14px;
+    }
+    .bg-custom-success{
+        
+        font-size: 14px;
+    }
 }
