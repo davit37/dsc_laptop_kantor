@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="<?php echo site_url('assets/front/')?>bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php echo site_url('assets/front/')?>style/style.css">
   <link rel="stylesheet" href="<?php echo site_url('assets/front/')?>style/desktop.css">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/dist/css/custom.css?=kljk">
 
   <title>Hello, world!</title>
 </head>

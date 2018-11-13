@@ -28,25 +28,39 @@
         }
         ?>
 
-<br><br>
+		<br><br>
+		
+			<div id='notif' class=' col-6 col-md-8'>
+
+      </div>
+
+
 
 		<div class="col-8  col-md-8 col-lg-9">
 			<div class="form-group">
 				<div class="custom-file">
-					<input type="file" class="custom-file-input" id="imgUp" lang="es" name='uploadimg'>
-					<label class="custom-file-label" for="customFileLang" id='lbl'>Seleccionar Archivo</label>
+					<form id='form-img'>
+						<input type="file" class="custom-file-input" id="imgUp" lang="es" name='uploadimg' accept="image/*">
+
+						<label class="custom-file-label" for="customFileLang" id='lbl'></label>
+
 
 				</div>
-				<br><br>
+        <br><br>
+        
+      <br>
+
+
 
 				<div class="col-4">
 					<img src="..." alt="images" class="img-thumbnail" id='prev'>
-        </div>
-        <br><br>
-        <div class="col-4">
-        <button type="button" class="btn btn-primary " id='img-submit'>submit</button>
-        </div>
-        
+				</div>
+				<br><br>
+				<div class="col-4">
+					<button type="button" class="btn btn-primary " id='img-submit'>submit</button>
+				</div>
+				</form>
+
 
 
 			</div>

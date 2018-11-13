@@ -1,5 +1,8 @@
 
   <!-- Footer -->
+  <div class='fixed-bottom ml-auto'>
+    <img src="<?php echo base_url('assets/file/icon/icon-back-to-top.png')?>" alt="te" srcset="">
+  </div>
   <div class="footer ">
     <p>Copyright Designcub3 © 2018</p>
   </div>
