@@ -10,7 +10,7 @@ let file = null;
 var imageType = /image.*/;
 
 
-
+//slider
 function nextShow() {
 	counter++;
 	if (counter == arrayImg.length) {
@@ -67,27 +67,30 @@ function readURL(input) {
 	}
 }
 
+
+//scroll hide
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-console.log(currentScrollPos)
-  if (currentScrollPos <100) {
-	$('.btn-scroll').fadeOut();
-    	
-  } else {
-	$('.btn-scroll').fadeIn();
-  }
-  prevScrollpos = currentScrollPos;
+window.onscroll = function () {
+	var currentScrollPos = window.pageYOffset;
+	console.log(currentScrollPos)
+
+	if (currentScrollPos < 116) {
+		$('.scroll-link:eq(0)').fadeOut();
+
+	} else if (currentScrollPos < 250) {
+		$('.scroll-link:eq(1)').fadeOut();
+	} else {
+		$('.scroll-link:eq(0)').fadeIn();
+		$('.scroll-link:eq(1)').fadeIn();
+	}
+	prevScrollpos = currentScrollPos;
 }
 
 // jquery 
 $(document).ready(function () {
 
-
-
 	$('#prev').hide();
 	$('#img-submit').hide();
-
 
 	$.ajax({
 		method: "GET",
@@ -112,8 +115,6 @@ $(document).ready(function () {
 
 
 	//event save upload
-
-
 
 	$("#imgUp").change(function () {
 		readURL(this);
@@ -160,24 +161,24 @@ $(document).ready(function () {
 		if (this.hash !== "") {
 			// Prevent default anchor click behavior
 			event.preventDefault();
-
+			var offset = 0;
 			// Store hash
 			var hash = this.hash;
 
+			console.log(hash)
+
 			// Using jQuery's animate() method to add smooth page scroll
 			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			if ($(this).data('offset') != undefined) offset = $(this).data('offset');
 			$('html, body').animate({
-				scrollTop: $(hash).offset().top
-			}, 800, function () {
+				scrollTop: $(hash).offset().top - offset
+			}, 1000, 'swing', function () {
 
 				// Add hash (#) to URL when done scrolling (default click behavior)
-				window.location.hash = hash;
+				//window.location.hash = hash;
 			});
 		} // End if
 	});
 
-	
-
 
 })
-

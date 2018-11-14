@@ -1,6 +1,21 @@
 body {
   font-family: 'Open Sans', sans-serif; }
 
+::-webkit-scrollbar {
+  width: 6px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.815); }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4b9cf3da; }
+
 .jumbotron {
   background-image: url(/assets/file/tyre-background.png);
   background-size: cover;

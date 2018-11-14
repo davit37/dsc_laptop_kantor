@@ -1,8 +1,8 @@
 
   <!-- Footer -->
   <div class='fixed-bottom ml-auto btn-scroll'>
-     <a href='#slider' class='scroll-link'> <i class="fas fa-arrow-circle-up"></i> To Top</a>
-     <a href='#articel' class='scroll-link'> <i class="fas fa-arrow-circle-right"></i> To Articel</a>
+     <a href='#slider' class='scroll-link' data-offset="100"> <i class="fas fa-arrow-circle-up"></i> To Top</a>
+     <a href='#articel' class='scroll-link' data-offset="300"> <i class="fas fa-arrow-circle-left"></i> To Articel</a>
   </div>
   <div class="footer ">
     <p>Copyright Designcub3 © 2018</p>
